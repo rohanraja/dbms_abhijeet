@@ -6,11 +6,14 @@
 #include<map>
 #include<cstdlib>
 #include<utility>
+
 using namespace std;
+
 typedef vector <vector<int> > time_value;
 typedef map<string,time_value > inner_map;
 typedef map<string, inner_map> outer_map; 
 outer_map out_map;
+
 outer_map* take_input() {
   string first_line;int n;
   cin>>first_line;
@@ -30,8 +33,6 @@ outer_map* take_input() {
     length_string=input_values.size();
     int temp_time= atoi(input_values[0].c_str());
     if ( out_map.find(input_values[1]) == out_map.end() ) {
-      // not found
-      // cout<<"Symbol not found"<<"\n";
       for(int j=2;j<length_string-1;j=j+2){
         int temp_value= atoi(input_values[j+1].c_str());
         in_map[input_values[j]];
